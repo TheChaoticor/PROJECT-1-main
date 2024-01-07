@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url('5172658.jpg') no-repeat center center/cover;
+    height: 400vh;
+ 
+
+}
+
+.header{
+  
+    top:10px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+
+}
+.logo{
+    position: relative;
+    height: max-content;
+    width:max-content;
+    color: whitesmoke;
+    font-weight: 1000;
+    font-size: 3.5rem;
+    padding: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    
+    /* background-color: lightgreen; */
+}
+.logo:active{
+    background-color: lightgreen;
+}
+.logo:hover{
+    background-color: lightblue;
+    color: black;
+    font-size:3.3rem;
+    border-radius: 12px;
+
+}
+.nav{
+    padding: 20px;   
+}
+.nav a{
+    margin-top: 10px;
+    text-decoration: none;
+    color: antiquewhite;
+    margin: 0 27px 0 27px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    padding: 7px;
+    border-radius: 10px;
+    transition: all 0.3 ease-in;
+    cursor: pointer;
+
+}
+.nav a:hover{
+    background-color: lightskyblue;
+    color: black;
+  
+}
+.nav a:active{
+    background-color: crimson;
+}
+.sidebar{
+    position: sticky;
+    /* background-color: aquamarine; */
+    width: max-content;
+    padding: 25px;
+
+
+}
+ul{
+    position: sticky;
+    list-style-type: none;
+    line-height: 2.5;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: -20px;
+
+
+
+}
+li{
+    
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 5px;
+    color: navy;
+}
+.li-content{
+    display: none;
+}
+
+li:hover .li-content{
+    /* display: block;
+    background-color: transparent;
+    color: black;
+    font-size: 1rem;
+    line-height: 1; */
+}
