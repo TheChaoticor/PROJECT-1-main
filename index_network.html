@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            width:100vw;
+        }
+
+        .sidebar {
+            width: 600px;
+            background-color: #8d8c8c;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-x:hidden ;
+            border: 12px double white;
+        }
+
+        .sidebar::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        }
+
+        .search-bar {
+            margin: 20px;
+            position: static;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .search-button {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .user-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .user-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .user-pic,.rec-user-pic {
+            width: 45px;
+            height: 45px;
+            border: 1px solid #3498db;
+            border-radius: 50%;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .user-info {
+            flex-grow: 1;
+            display: block;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+
+        .connect-button {
+            padding: 8px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        /*Recommended div*/
+
+        .rec-user-info{
+            display:flex;
+        }
+
+        .recommended-heading {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0px 0px 10px 0px;
+            padding: 10px;
+            background-color: #7adf7eb9;
+            border: 3px solid rgb(45, 194, 58);
+        }
+
+        .recommended-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            overflow-x: hidden;
+            background-color: #5bd7d793;
+            border: #3498db;
+        }
+
+        .recommended-box {
+            width: 300px;
+            height: max-content; /* Adjust height as needed */
+            margin: 10px;
+            background-color: #444343;
+            color: aliceblue;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        .recommended-connections {
+            flex-grow: 1;
+            margin-left: 20px;
+            overflow: hidden;
+            padding: 10px;
+            margin: 0px 10px;
+        }
+
+        .connected-users {
+            display: flex;
+            align-items: center;
+        }
+
+        .connected-pic {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin:0px 10px 0px 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="sidebar">
+
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search Network">
+                <button class="search-button">Search</button>
+            </div>
+
+            <ul class="user-list">
+                <li class="user-item">
+                    <img src="images 3.JPEG" alt="User 1" class="user-pic">
+                    <div class="user-info">
+                        <span>User_Id:001</span><br>
+                        <span>Student Name: Name_1</span><br>
+                        <span>Year:_</span>
+                    </div>
+                    <button class="connect-button">Connect</button>
+                </li>
+                <li class="user-item">
+                    <img src="images 3.JPEG" alt="User 1" class="user-pic">
+                    <div class="user-info">
+                        <span>User_Id:002</span><br>
+                        <span>Student Name: Name_1</span><br>
+                        <span>Year:_</span>
+                    </div>
+                    <button class="connect-button">Connect</button>
+                </li>
+                <li class="user-item">
+                    <img src="images 3.JPEG" alt="User 1" class="user-pic">
+                    <div class="user-info">
+                        <span>User_Id:003</span><br>
+                        <span>Student Name: Name_1</span><br>
+                        <span>Year:_</span>
+                    </div>
+                    <button class="connect-button">Connect</button>
+                </li>
+                <li class="user-item">
+                    <img src="images 3.JPEG" alt="User 1" class="user-pic">
+                    <div class="user-info">
+                        <span>User_Id:004</span><br>
+                        <span>Student Name: Name_1</span><br>
+                        <span>Year:_</span>
+                    </div>
+                    <button class="connect-button">Connect</button>
+                </li>
+                <li class="user-item">
+                    <img src="images 3.JPEG" alt="User 1" class="user-pic">
+                    <div class="user-info">
+                        <span>User_Id:005</span><br>
+                        <span>Student Name: Name_1</span><br>
+                        <span>Year:_</span>
+                    </div>
+                    <button class="connect-button">Connect</button>
+                </li>
+                <li class="user-item">
+                    <img src="images 3.JPEG" alt="User 1" class="user-pic">
+                    <div class="user-info">
+                        <span>User_Id:006</span><br>
+                        <span>Student Name: Name_1</span><br>
+                        <span>Year:_</span>
+                    </div>
+                    <button class="connect-button">Connect</button>
+                </li>
+                <li class="user-item">
+                    <img src="images 3.JPEG" alt="User 1" class="user-pic">
+                    <div class="user-info">
+                        <span>User_Id:007</span><br>
+                        <span>Student Name: Name_1</span><br>
+                        <span>Year:_</span>
+                    </div>
+                    <button class="connect-button">Connect</button>
+                </li>
+                <li class="user-item">
+                    <img src="images 3.JPEG" alt="User 1" class="user-pic">
+                    <div class="user-info">
+                        <span>User_Id:008</span><br>
+                        <span>Student Name: Name_1</span><br>
+                        <span>Year:_</span>
+                    </div>
+                    <button class="connect-button">Connect</button>
+                </li>
+                <li class="user-item">
+                    <img src="images 3.JPEG" alt="User 1" class="user-pic">
+                    <div class="user-info">
+                        <span>User_Id:009</span><br>
+                        <span>Student Name: Name_1</span><br>
+                        <span>Year:_</span>
+                    </div>
+                    <button class="connect-button">Connect</button>
+                </li>
+                <li class="user-item">
+                    <img src="images 3.JPEG" alt="User 1" class="user-pic">
+                    <div class="user-info">
+                        <span>User_Id:010</span><br>
+                        <span>Student Name: Name_1</span><br>
+                        <span>Year:_</span>
+                    </div>
+                    <button class="connect-button">Connect</button>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="recommended-connections">
+            <div class="recommended-heading">Recommended Connections</div>
+
+            <div class="recommended-boxes">
+                
+                 <div class="recommended-box">
+                    <div class="rec-user-info">
+                        <img src="images 3.JPEG" alt="User 4" class="user-pic">
+                        <div class="rec-user-details">
+                            <div class="rec-user-id">User_id</div>
+                            <div class="rec-user-name">Jane Smith</div>
+                            <div class="rec-degree-year">Business Administration, Year 2</div>
+                        </div>
+                    </div>
+                    <div class="rec-user-bio">
+                        <p><i>Bio- </i><br> Sed vitae velit vel tellus ullamcorper consectetur vitae a metus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobione explicabo, nam molestiae eveniet, quibusdam assumenda facere dignissimos ut neque unde doloremque! Error facilis nisi voluptatum? Voluptates eos nihil minus dolorum! Aliquamsdgasdvsdvasdvasdaccusamus error hic rerum beatae sed excepturi. 
+                        </p>
+                    </div>
+                    <div class="connected-users">
+                        <p class="m-connections">Mutual connections-</p>
+                        <img src="user5.jpg" alt="Connected User 3" class="connected-pic">
+                        <img src="user6.jpg" alt="Connected User 4" class="connected-pic">
+                        <img src="user5.jpg" alt="Connected User 3" class="connected-pic">
+                    </div>
+                </div>
+
+                <div class="recommended-box">
+                    <div class="rec-user-info">
+                        <img src="images 3.JPEG" alt="User 4" class="user-pic">
+                        <div class="rec-user-details">
+                            <div class="rec-user-id">User_id</div>
+                            <div class="rec-user-name">Jane Smith</div>
+                            <div class="rec-degree-year">Business Administration, Year 2</div>
+                        </div>
+                    </div>
+                    <div class="rec-user-bio">
+                        <p><i>Bio- </i><br> Sed vitae velit vel tellus ullamcorper consectetur vitae a metus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobione explicabo, nam molestiae eveniet, quibusdam assumenda facere dignissimos ut neque unde doloremque! Error facilis nisi voluptatum? Voluptates eos nihil minus dolorum! Aliquamsdgasdvsdvasdvasdaccusamus error hic rerum beatae sed excepturi. 
+                        </p>
+                    </div>
+                    <div class="connected-users">
+                        <p class="m-connections">Mutual connections-</p>
+                        <img src="user5.jpg" alt="Connected User 3" class="connected-pic">
+                        <img src="user6.jpg" alt="Connected User 4" class="connected-pic">
+                        <img src="user5.jpg" alt="Connected User 3" class="connected-pic">
+                    </div>
+                </div>
+
+                <div class="recommended-box">
+                    <div class="rec-user-info">
+                        <img src="images 3.JPEG" alt="User 4" class="user-pic">
+                        <div class="rec-user-details">
+                            <div class="rec-user-id">User_id</div>
+                            <div class="rec-user-name">Jane Smith</div>
+                            <div class="rec-degree-year">Business Administration, Year 2</div>
+                        </div>
+                    </div>
+                    <div class="rec-user-bio">
+                        <p><i>Bio- </i><br> Sed vitae velit vel tellus ullamcorper consectetur vitae a metus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobione explicabo, nam molestiae eveniet, quibusdam assumenda facere dignissimos ut neque unde doloremque! Error facilis nisi voluptatum? Voluptates eos nihil minus dolorum! Aliquamsdgasdvsdvasdvasdaccusamus error hic rerum beatae sed excepturi. 
+                        </p>
+                    </div>
+                    <div class="connected-users">
+                        <p class="m-connections">Mutual connections-</p>
+                        <img src="user5.jpg" alt="Connected User 3" class="connected-pic">
+                        <img src="user6.jpg" alt="Connected User 4" class="connected-pic">
+                        <img src="user5.jpg" alt="Connected User 3" class="connected-pic">
+                    </div>
+                </div>
+
+                <div class="recommended-box">
+                    <div class="rec-user-info">
+                        <img src="images 3.JPEG" alt="User 4" class="user-pic">
+                        <div class="rec-user-details">
+                            <div class="rec-user-id">User_id</div>
+                            <div class="rec-user-name">Jane Smith</div>
+                            <div class="rec-degree-year">Business Administration, Year 2</div>
+                        </div>
+                    </div>
+                    <div class="rec-user-bio">
+                        <p><i>Bio- </i><br> Sed vitae velit vel tellus ullamcorper consectetur vitae a metus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobione explicabo, nam molestiae eveniet, quibusdam assumenda facere dignissimos ut neque unde doloremque! Error facilis nisi voluptatum? Voluptates eos nihil minus dolorum! Aliquamsdgasdvsdvasdvasdaccusamus error hic rerum beatae sed excepturi. 
+                        </p>
+                    </div>
+                    <div class="connected-users">
+                        <p class="m-connections">Mutual connections-</p>
+                        <img src="user5.jpg" alt="Connected User 3" class="connected-pic">
+                        <img src="user6.jpg" alt="Connected User 4" class="connected-pic">
+                        <img src="user5.jpg" alt="Connected User 3" class="connected-pic">
+                    </div>
+                </div>
+                
+                <div class="recommended-box">
+                    <div class="rec-user-info">
+                        <img src="images 3.JPEG" alt="User 4" class="user-pic">
+                        <div class="rec-user-details">
+                            <div class="rec-user-id">User_id</div>
+                            <div class="rec-user-name">Jane Smith</div>
+                            <div class="rec-degree-year">Business Administration, Year 2</div>
+                        </div>
+                    </div>
+                    <div class="rec-user-bio">
+                        <p><i>Bio- </i><br> Sed vitae velit vel tellus ullamcorper consectetur vitae a metus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobione explicabo, nam molestiae eveniet, quibusdam assumenda facere dignissimos ut neque unde doloremque! Error facilis nisi voluptatum? Voluptates eos nihil minus dolorum! Aliquamsdgasdvsdvasdvasdaccusamus error hic rerum beatae sed excepturi. 
+                        </p>
+                    </div>
+                    <div class="connected-users">
+                        <img src="user5.jpg" alt="Connected User 3" class="connected-pic">
+                        <img src="user6.jpg" alt="Connected User 4" class="connected-pic">
+                        <img src="user5.jpg" alt="Connected User 3" class="connected-pic">
+                    </div>
+                </div>
+
+                <div class="recommended-box">
+                    <div class="rec-user-info">
+                        <img src="images 3.JPEG" alt="User 4" class="user-pic">
+                        <div class="rec-user-details">
+                            <div class="rec-user-id">User_id</div>
+                            <div class="rec-user-name">Jane Smith</div>
+                            <div class="rec-degree-year">Business Administration, Year 2</div>
+                        </div>
+                    </div>
+                    <div class="rec-user-bio">
+                        <p><i>Bio- </i><br> Sed vitae velit vel tellus ullamcorper consectetur vitae a metus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobione explicabo, nam molestiae eveniet, quibusdam assumenda facere dignissimos ut neque unde doloremque! Error facilis nisi voluptatum? Voluptates eos nihil minus dolorum! Aliquamsdgasdvsdvasdvasdaccusamus error hic rerum beatae sed excepturi. 
+                        </p>
+                    </div>
+
+                    <div class="connected-users">
+                        <img src="user5.jpg" alt="Connected User 3" class="connected-pic">
+                        <img src="user6.jpg" alt="Connected User 4" class="connected-pic">
+                        <img src="user5.jpg" alt="Connected User 3" class="connected-pic">
+                    </div>
+                </div>
+                
+                <div class="recommended-box">
+                    <div class="rec-user-info">
+                        <img src="images 3.JPEG" alt="User 4" class="user-pic">
+                        <div class="rec-user-details">
+                            <div class="rec-user-id">User_id</div>
+                            <div class="rec-user-name">Jane Smith</div>
+                            <div class="rec-degree-year">Business Administration, Year 2</div>
+                        </div>
+                    </div>
+                    <div class="rec-user-bio">
+                        <p><i>Bio- </i><br> Sed vitae velit vel tellus ullamcorper consectetur vitae a metus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobione explicabo, nam molestiae eveniet, quibusdam assumenda facere dignissimos ut neque unde doloremque! Error facilis nisi voluptatum? Voluptates eos nihil minus dolorum! Aliquamsdgasdvsdvasdvasdaccusamus error hic rerum beatae sed excepturi. 
+                        </p>
+                    </div>
+
+                    <div class="connected-users">
+                        <img src="user5.jpg" alt="Connected User 3" class="connected-pic">
+                        <img src="user6.jpg" alt="Connected User 4" class="connected-pic">
+                        <img src="user5.jpg" alt="Connected User 3" class="connected-pic">
+                    </div>
+                </div>
+
+                <div class="recommended-box">
+                    <div class="rec-user-info">
+                        <img src="images 3.JPEG" alt="User 4" class="user-pic">
+                        <div class="rec-user-details">
+                            <div class="rec-user-id">User_id</div>
+                            <div class="rec-user-name">Jane Smith</div>
+                            <div class="rec-degree-year">Business Administration, Year 2</div>
+                        </div>
+                    </div>
+                    <div class="rec-user-bio">
+                        <p><i>Bio- </i><br> Sed vitae velit vel tellus ullamcorper consectetur vitae a metus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobione explicabo, nam molestiae eveniet, quibusdam assumenda facere dignissimos ut neque unde doloremque! Error facilis nisi voluptatum? Voluptates eos nihil minus dolorum! Aliquamsdgasdvsdvasdvasdaccusamus error hic rerum beatae sed excepturi. 
+                        </p>
+                    </div>
+
+                    <div class="connected-users">
+                        <img src="user5.jpg" alt="Connected User 3" class="connected-pic">
+                        <img src="user6.jpg" alt="Connected User 4" class="connected-pic">
+                        <img src="user5.jpg" alt="Connected User 3" class="connected-pic">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
